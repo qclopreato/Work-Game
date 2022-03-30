@@ -1,18 +1,19 @@
 let money = 0;
 let energy = 100;
 
-function preEnergy(){
-    var interval = setInterval(energyFunction, 500);
-};
-
-function energyFunction(){
-    energy -= 1;
-    document.querySelector(`.energy`).innerHTML = `Energy: ` + energy;
-};
-
 document.querySelector(`.code`).addEventListener(`click`, function(){
-    money += 1;
-    document.querySelector(`.money`).innerHTML = `$` + money;
+    if (energy > 0){
+        money += 1;
+        energy -= 1;
+        document.querySelector(`.money`).innerHTML = `$` + money;
+        document.querySelector(`.energy`).innerHTML = energy;
+    } else if (energy === 0){
+        document.querySelector(`.code`).disabled = true;
+        document.querySelector(`.code`).style.pointerEvents = `none`;
+        document.querySelector(`.drink`).style.pointerEvents = `none`;
+        document.querySelector(`.store`).style.pointerEvents = `none`;
+        alert(`Game Over`);
+    }
 });
 
 document.querySelector(`.drink`).addEventListener(`click`, function(){
@@ -20,7 +21,7 @@ document.querySelector(`.drink`).addEventListener(`click`, function(){
         money -= 10;
         const energyCheck = energy < 71 ? energy += 30 : energy += 100 - energy;
         document.querySelector(`.money`).innerHTML = `$` + money;
-        document.querySelector(`.energy`).innerHTML = `Energy: ` + energy;
+        document.querySelector(`.energy`).innerHTML = energy;
     } else if (money < 10){
         energy += 0;
     } 
