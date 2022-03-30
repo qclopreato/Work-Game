@@ -7,13 +7,28 @@ html {
 
 .grid_container {
   display: grid;
-  grid-template-rows: fit-content(0) 375px;
+  grid-template-rows: fit-content(0) fit-content(0) 375px;
   grid-template-columns: 100%;
   background-color: black;
 }
 
+.about {
+  background-color: #1dc21a;
+  width: 500px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.aboutPage {
+  margin: 3px;
+  font-family: "Lucida Console";
+}
+
 .bar {
-  background-color: darkblue;
+  background-color: #4c3c68;
   width: 500px;
   margin-top: 0px;
   margin-right: auto;
@@ -40,10 +55,10 @@ html {
 }
 
 .code {
-  background-color: lime;
-  border-color: lime;
+  background-color: #1dc21a;
+  border-color: #1dc21a;
   font-family: "Lucida Console";
-  width: 50px;
+  width: 60px;
   height: 30px;
 }
 
@@ -55,7 +70,7 @@ html {
   font-family: "Arial Black";
   font-size: 20px;
   font-style: italic;
-  color: green;
+  color: #1dc21a;
   margin: 0px;
 }
 
@@ -67,24 +82,32 @@ html {
   margin: 0px;
 }
 
-.day {
-  font-family: "Arial Black";
-  font-size: 20px;
-  font-style: italic;
-  color: rgb(255, 0, 149);
-  margin: 0px;
-}
-
 .drink {
   position: absolute;
-  top: 35px;
+  top: 43px;
   left: 0;
   right: 0;
   margin: auto;
   width: 150px;
-  height: 15px;
+  height: 13px;
 }
 
 .drink:hover {
   cursor: pointer;
+}
+
+.store {
+  position: absolute;
+  top: 35px;
+  left: 420px;
+  right: 0px;
+  margin: auto;
+  height: 30px;
+  width: 60px;
+  padding: 2px;
+}
+
+.ebay {
+  height: 20px;
+  width: 50px;
 }
