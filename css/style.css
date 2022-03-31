@@ -1,5 +1,4 @@
-body,
-html {
+body {
   margin: 0px;
   padding: 0px;
   background-color: black;
@@ -149,7 +148,112 @@ html {
   padding: 2px;
 }
 
-.ebay {
+.ebay_button {
   height: 20px;
   width: 50px;
 }
+
+/*Ebay*/
+.ebay_body{
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+.ebay_container {
+  display: grid;
+  grid-template-rows: fit-content(0) fit-content(0) 375px;
+  grid-template-columns: 100%;
+  border: 1px solid red;
+}
+
+.ebay{
+  float: left;
+  margin: 10px;
+  height: 45px;
+  width: 105px;
+}
+
+.top_container{
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid red;
+}
+
+.buy{
+  float: right;
+  left: 600px;
+  border-bottom-left-radius: 10px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.sell{
+  float: right;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.my_eBay{
+  float: right;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.community{
+  float: right;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.help{
+  float: right;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.welcome{
+  margin-top: 40px;
+  margin-left: 140px;
+}
+
+.search_container{
+  margin-top: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 0px;
+  border: 1px solid red;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(222, 222, 12))
+}
+
+.search_ebay{
+  margin-left: 25px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 300px;
+}
+/*End Ebay*/
