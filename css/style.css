@@ -296,7 +296,7 @@ body {
 }
 
 .middle_column{
-  margin-top: 40px;
+  margin-top: 0px;
   margin-right: 0px;
   width: 320px;
   float: left;
@@ -309,12 +309,12 @@ body {
   float: right;
 }
 
-.sections_left_title {
+.sections_left_title_one {
   width: 320px;
   height: auto;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-right: 0px;
-  margin-left: 10px;
+  margin-left: 0px;
   margin-bottom: 0px;
   background: #FFCC66;
   clear: both;
@@ -324,12 +324,43 @@ body {
   background-image: linear-gradient(white, rgb(254, 254, 21))
 }
 
-.sections_left_chunk {
+.sections_left_title_two {
+  width: 320px;
+  height: auto;
+  margin-top: 15px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background: #FFCC66;
+  clear: both;
+  border: 1px solid rgb(161, 161, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(254, 254, 21))
+}
+
+.sections_left_chunk_one {
   height: fit-content;
-  margin-left: 10px;
+  margin-left: 0px;
   margin-top: 0px;
-  width: 300px;
-  padding: 10px;
+  width: 320px;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  border: 1px solid lightgray;
+  font-size: small;
+}
+
+.sections_left_chunk_two {
+  height: fit-content;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 320px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
   border: 1px solid lightgray;
   font-size: small;
 }
@@ -337,10 +368,13 @@ body {
 .sections_left_bottom {
   height: fit-content;
   text-align: right;
-  margin-left: 10px;
+  margin-left: 0px;
   margin-top: 0px;
   width: 320px;
-  padding: 0px;
+  padding-top: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 5px;
   border: 1px solid lightgray;
   font-size: small;
   border-bottom-left-radius: 10px;
@@ -357,11 +391,17 @@ body {
 }
 
 .middle_a{
+  text-decoration: none;
+  color: rgb(0, 0, 165);
   display: block;
   margin-top: 0px;
   margin-right: 0px;
   margin-left: 10px;
   margin-bottom: 0px;
+}
+
+.middle_a:hover{
+  text-decoration: underline;
 }
 
 .middle_p_titles{
@@ -375,52 +415,20 @@ body {
   font-size: 15px;
 }
 
-.middle_p_footer{
-  padding: 5px;
+.middle_a_footer{
+  text-decoration: none;
+  margin-right: 10px;
+  font-family: arial, helvetica, sans-serif;
+  color: rgb(0, 0, 165);
+  font-size: small;
+}
+
+.middle_a_footer:hover{
+  text-decoration: underline;
+}
+
+#globe_pic{
   margin: auto;
-  font-family: arial, helvetica, sans-serif;
-  color: blue;
-  font-size: small;
+  width: 100%;
 }
-
-/*#favorite_title--container{
-  height: auto;
-  margin-top: 40px;
-  margin-right: 0px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  width: 320px;
-  border: 1px solid rgb(161, 161, 6);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-image: linear-gradient(white, rgb(254, 254, 21))
-}
-
-#shop_fav{
-  padding: 0px;
-  margin-top: 8px;
-  margin-right: 8px;
-  margin-left: 20px;
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-family: arial, helvetica, sans-serif;
-  color: #5d5d5d;
-  font-size: 15px;
-}
-
-#favorite_container{
-  height: fit-content;
-  margin-top: 0px;
-  width: 300px;
-  padding: 10px;
-  border: 1px solid lightgray;
-  font-size: small;
-}
-
-.categories{
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 10px;
-  margin-bottom: 0px;
-}*/
 /*End Ebay*/
