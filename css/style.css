@@ -256,7 +256,7 @@ body {
   font-weight: 700;
 }
 
-#welcome{
+#greeting{
   margin-top: 40px;
   margin-left: 140px;
 }
@@ -287,11 +287,103 @@ body {
 }
 
 #middle_section{
-  margin: auto;
   width: 900px;
+  border: 1px solid red;
+  grid-template-columns: 320px 580px;
+  grid-template-rows: 100px; 
+  margin: auto;
+  height: auto;
 }
 
-#favorite_title--container{
+.middle_column{
+  margin-top: 40px;
+  margin-right: 0px;
+  width: 320px;
+  float: left;
+}
+
+.right{
+  margin-top: 30px;
+  margin-right: 0px;
+  width: auto;
+  float: right;
+}
+
+.sections_left_title {
+  width: 320px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  background: #FFCC66;
+  clear: both;
+  border: 1px solid rgb(161, 161, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(254, 254, 21))
+}
+
+.sections_left_chunk {
+  height: fit-content;
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  font-size: small;
+}
+
+.sections_left_bottom {
+  height: fit-content;
+  text-align: right;
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 320px;
+  padding: 0px;
+  border: 1px solid lightgray;
+  font-size: small;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-image: linear-gradient(white, lightgray);
+}
+
+.sections_right {
+  width: 540px;
+  height: 50px;
+  margin: 10px;
+  background: #FFCC66;
+  clear: both;
+}
+
+.middle_a{
+  display: block;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.middle_p_titles{
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: #5d5d5d;
+  font-size: 15px;
+}
+
+.middle_p_footer{
+  padding: 5px;
+  margin: auto;
+  font-family: arial, helvetica, sans-serif;
+  color: blue;
+  font-size: small;
+}
+
+/*#favorite_title--container{
   height: auto;
   margin-top: 40px;
   margin-right: 0px;
@@ -330,5 +422,5 @@ body {
   margin-right: 0px;
   margin-left: 10px;
   margin-bottom: 0px;
-}
+}*/
 /*End Ebay*/
