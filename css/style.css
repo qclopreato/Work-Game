@@ -280,17 +280,64 @@ body {
 
 #color_line{
   margin: auto;
-  margin-top: 0px;
+  margin-top: 0;
   width: 902px;
   height: 3px;
   background-image: linear-gradient(to right, red 0%, red 20%, rgb(102, 0, 0) 20%, rgb(102, 0, 0) 25%, blue 25%, blue 45%, brown 45%, brown 50%, yellow 50%, yellow 70%, rgb(160, 160, 0) 70%, rgb(62, 118, 25) 75%, rgb(2, 187, 2) 75%, rgb(2, 187, 2) 100%);
 }
 
+#below_color_line_buttons{
+  margin: auto;
+  margin-top: 0;
+  width: 902px;
+  height: fit-content;
+}
+
+#categories_button{
+  float: left;
+  left: 600px;
+  border-bottom-left-radius: 10px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+#motors_button{
+  float: left;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+#express_button{
+  float: left;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
+#stores_button{
+  float: left;
+  left: 640px;
+  border-width: 1px;
+  border-color: lightgray;
+  border-bottom-right-radius: 10px;
+  height: 25px;
+  width: fit-content;
+  font-weight: 700;
+}
+
 #middle_section{
   width: 900px;
-  border: 1px solid red;
   grid-template-columns: 320px 580px;
-  grid-template-rows: 100px; 
   margin: auto;
   height: auto;
 }
@@ -298,34 +345,47 @@ body {
 .middle_column{
   margin-top: 0px;
   margin-right: 0px;
-  width: 320px;
+  width: 310px;
   float: left;
 }
 
 .right{
-  margin-top: 30px;
-  margin-right: 0px;
-  width: auto;
+  margin-top: 0px;
+  margin-left: 5px;
+  width: 570px; 
   float: right;
 }
 
-.sections_left_title_one {
-  width: 320px;
+#sections_left_title_one {
+  width: 100%;
   height: auto;
   margin-top: 40px;
   margin-right: 0px;
   margin-left: 0px;
   margin-bottom: 0px;
   background: #FFCC66;
-  clear: both;
   border: 1px solid rgb(161, 161, 6);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-image: linear-gradient(white, rgb(254, 254, 21))
 }
 
-.sections_left_title_two {
-  width: 320px;
+#sections_right_title_one {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  background: #FFCC66;
+  border: 1px solid rgb(161, 161, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(254, 254, 21))
+}
+
+#sections_left_title_two {
+  width: 100%;
   height: auto;
   margin-top: 15px;
   margin-right: 0px;
@@ -339,11 +399,41 @@ body {
   background-image: linear-gradient(white, rgb(254, 254, 21))
 }
 
-.sections_left_chunk_one {
+#sections_right_title_two {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background: #FFCC66;
+  clear: both;
+  border: 1px solid rgb(161, 161, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(254, 254, 21))
+}
+
+#sections_right_title_three {
+  width: 100%;
+  height: 35px;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background: #FFCC66;
+  clear: both;
+  border: 1px solid rgb(161, 161, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(254, 254, 21))
+}
+
+#sections_left_chunk_one {
   height: fit-content;
   margin-left: 0px;
   margin-top: 0px;
-  width: 320px;
+  width: 100%;
   padding-top: 10px;
   padding-right: 0px;
   padding-left: 0px;
@@ -352,11 +442,20 @@ body {
   font-size: small;
 }
 
-.sections_left_chunk_two {
+#sections_right_chunk_one {
+  height: fit-content;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+#sections_left_chunk_two {
   height: fit-content;
   margin-left: 0px;
   margin-top: 0px;
-  width: 320px;
+  width: 100%;
   padding-top: 0px;
   padding-right: 0px;
   padding-left: 0px;
@@ -365,12 +464,21 @@ body {
   font-size: small;
 }
 
-.sections_left_bottom {
+#sections_right_chunk_two {
+  height: fit-content;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+#sections_left_bottom {
   height: fit-content;
   text-align: right;
   margin-left: 0px;
   margin-top: 0px;
-  width: 320px;
+  width: 100%;
   padding-top: 5px;
   padding-right: 0px;
   padding-left: 0px;
@@ -380,14 +488,6 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-image: linear-gradient(white, lightgray);
-}
-
-.sections_right {
-  width: 540px;
-  height: 50px;
-  margin: 10px;
-  background: #FFCC66;
-  clear: both;
 }
 
 .middle_a{
@@ -430,5 +530,15 @@ body {
 #globe_pic{
   margin: auto;
   width: 100%;
+}
+
+#welcome_gif{
+  width: 100%;
+  margin: auto;
+}
+
+#win_pic{
+  width: 100%;
+  margin: auto;
 }
 /*End Ebay*/
