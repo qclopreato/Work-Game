@@ -204,56 +204,85 @@ body {
   padding: 0px;
 }
 
-#buy{
+#top_options_container{
+  vertical-align: middle;
   float: right;
-  left: 600px;
+  padding: 0;
+  background-image: linear-gradient(white, rgb(236, 236, 236));
+  border: 1px solid lightgray;
   border-bottom-left-radius: 10px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
+  border-bottom-right-radius: 10px;
   width: fit-content;
+  height: fit-content;
+}
+
+#buy{
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: small;
 }
 
 #sell{
-  float: right;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
-  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: small;
 }
 
 #my_eBay{
-  float: right;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
-  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: small;
 }
 
 #community{
-  float: right;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
-  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: small;
 }
 
 #help{
-  float: right;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  border-bottom-right-radius: 10px;
-  height: 25px;
-  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: small;
 }
 
 #greeting{
@@ -287,52 +316,87 @@ body {
 }
 
 #below_color_line_buttons{
+  vertical-align: middle;
   margin: auto;
-  margin-top: 0;
-  width: 902px;
+  padding: 0;
+  background-image: linear-gradient(white, rgb(236, 236, 236));
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 900px;
   height: fit-content;
 }
 
-#categories_button{
-  float: left;
-  left: 600px;
-  border-bottom-left-radius: 10px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
-  width: fit-content;
+#categories_bar{
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: #5d5d5d;
+  font-size: small;
 }
 
-#motors_button{
-  float: left;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
-  width: fit-content;
-  font-weight: 700;
+#categories_bar:hover{
+  text-decoration: underline;
 }
 
-#express_button{
-  float: left;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  height: 25px;
-  width: fit-content;
+#motors_bar{
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: #5d5d5d;
+  font-size: small;
 }
 
-#stores_button{
-  float: left;
-  left: 640px;
-  border-width: 1px;
-  border-color: lightgray;
-  border-bottom-right-radius: 10px;
-  height: 25px;
-  width: fit-content;
+#motors_bar:hover{
+  text-decoration: underline;
+}
+
+#express_bar{
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  border-right: 1px solid lightgray;
   font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: #5d5d5d;
+  font-size: small;
+}
+
+#express_bar:hover{
+  text-decoration: underline;
+}
+
+#stores_bar{
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  border-right: 1px solid lightgray;
+  font-weight: 700;
+  font-family: arial, helvetica, sans-serif;
+  color: #5d5d5d;
+  font-size: small;
+}
+
+#stores_bar:hover{
+  text-decoration: underline;
 }
 
 #middle_section{
@@ -367,7 +431,7 @@ body {
   border: 1px solid rgb(161, 161, 6);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-image: linear-gradient(white, rgb(254, 254, 21))
+  background-image: linear-gradient(white, rgb(254, 254, 21));
 }
 
 #sections_right_title_one {
@@ -392,7 +456,6 @@ body {
   margin-left: 0px;
   margin-bottom: 0px;
   background: #FFCC66;
-  clear: both;
   border: 1px solid rgb(161, 161, 6);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -407,7 +470,6 @@ body {
   margin-left: 0px;
   margin-bottom: 0px;
   background: #FFCC66;
-  clear: both;
   border: 1px solid rgb(161, 161, 6);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -422,7 +484,6 @@ body {
   margin-left: 0px;
   margin-bottom: 0px;
   background: #FFCC66;
-  clear: both;
   border: 1px solid rgb(161, 161, 6);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -473,6 +534,15 @@ body {
   border: 1px solid lightgray;
 }
 
+#sections_right_chunk_three {
+  height: 275px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
 #sections_left_bottom {
   height: fit-content;
   text-align: right;
@@ -487,7 +557,7 @@ body {
   font-size: small;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-image: linear-gradient(white, lightgray);
+  background-image: linear-gradient(white, rgb(236, 236, 236));
 }
 
 .middle_a{
@@ -540,5 +610,19 @@ body {
 #win_pic{
   width: 100%;
   margin: auto;
+}
+
+#fashion_end{
+  margin: 0;
+  width: 50%;
+  height: 275px;
+  float: left;
+}
+
+#technology_end{
+  margin: 0;
+  width: 50%;
+  height: 275px;
+  float: right;
 }
 /*End Ebay*/
