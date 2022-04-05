@@ -230,6 +230,10 @@ body {
   font-size: small;
 }
 
+#buy:hover{
+  text-decoration: underline;
+}
+
 #sell{
   text-decoration: none;
   display: inline-block;
@@ -242,6 +246,10 @@ body {
   font-family: arial, helvetica, sans-serif;
   color: black;
   font-size: small;
+}
+
+#sell:hover{
+  text-decoration: underline;
 }
 
 #my_eBay{
@@ -258,6 +266,10 @@ body {
   font-size: small;
 }
 
+#my_eBay:hover{
+  text-decoration: underline;
+}
+
 #community{
   text-decoration: none;
   display: inline-block;
@@ -272,6 +284,10 @@ body {
   font-size: small;
 }
 
+#community:hover{
+  text-decoration: underline;
+}
+
 #help{
   text-decoration: none;
   display: inline-block;
@@ -283,6 +299,10 @@ body {
   font-family: arial, helvetica, sans-serif;
   color: black;
   font-size: small;
+}
+
+#help:hover{
+  text-decoration: underline;
 }
 
 #greeting{
@@ -490,6 +510,20 @@ body {
   background-image: linear-gradient(white, rgb(254, 254, 21))
 }
 
+#sections_right_title_four {
+  width: 100%;
+  height: 35px;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background: #FFCC66;
+  border: 1px solid rgb(161, 161, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(white, rgb(254, 254, 21))
+}
+
 #sections_left_chunk_one {
   height: fit-content;
   margin-left: 0px;
@@ -510,6 +544,8 @@ body {
   margin-right: 0;
   width: 100%;
   border: 1px solid lightgray;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #sections_left_chunk_two {
@@ -532,6 +568,8 @@ body {
   margin-right: 0;
   width: 100%;
   border: 1px solid lightgray;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #sections_right_chunk_three {
@@ -541,6 +579,41 @@ body {
   margin-right: 0;
   width: 100%;
   border: 1px solid lightgray;
+}
+
+#sections_right_chunk_four {
+  display: inline-block;
+  height: fit-content;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+#sections_right_chunk_four_left{
+  width: fit-content;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  float: left;
+}
+
+#sections_right_chunk_four_right{
+  width: fit-content;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  float: right;
+}
+
+.list{
+  padding-left: 30px;
+  font-size: small;
 }
 
 #sections_left_bottom {
@@ -603,7 +676,8 @@ body {
 }
 
 #welcome_gif{
-  width: 100%;
+  width: 98%;
+  padding: 1px;
   margin: auto;
 }
 
@@ -624,5 +698,18 @@ body {
   width: 50%;
   height: 275px;
   float: right;
+}
+
+#express_pic{
+  padding: 10px;
+  padding-right: 20px;
+  width: 45%;
+  border-right: 1px solid lightgray;
+}
+
+#stubhub_pic{
+  padding: 10px;
+  float: right;
+  width: 45%;
 }
 /*End Ebay*/
