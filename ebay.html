@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Work Game</title>
 </head>
-<body id="ebay_body">
+<body id="ebay_body" onload="myFunction()">
     <div id="ebay_container">
         <div id="top_section">
             <div id="top_options_container">
                 <a href="#" id="buy">Buy</a><a href="#" id="sell">Sell</a><a href="#" id="my_eBay">My eBay</a><a href="#" id="community">Community</a><a href="#" id="help">Help</a>
             </div>
             <img src="pix/ebay.png" id="ebay" alt="Ebay Logo">
-            <p id="greeting">Welcome! <span>Sign in </span> or <span>register</span></p>
+            <p id="greeting">Welcome! You have <span id="money_balance"></span> and <span id="energy_balance"></span>.</p>
         </div>
         <div id="search_container">
             <input type="text" id="search_ebay">
@@ -73,7 +73,9 @@
                 </div>
                 <div id="sections_left_chunk_two">
                     <img src="pix/globe.jpg" id="globe_pic" alt="Kid holding a globe">
-                    <p class="middle_a"></p>
+                    <p class="middle_p_titles">See what Quinn's up to!</p>
+                    <a class="middle_a" href="https://github.com/qclopreato" target="_blank">Quinn's GitHub</a></li>
+                    <a class="middle_a" href="https://www.linkedin.com/in/quinn-lopreato-3a7b42230?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrQvKdoD8T3qi8DdAh3kWPw%3D%3D" target="_blank">Quinn's LinkedIn</a></li>
                 </div>
             </div>
             <div class="middle_column right">
@@ -107,16 +109,16 @@
                 <div id="sections_right_chunk_four">
                     <div id="sections_right_chunk_four_left">
                         <ul class="list">
-                            <li><a href="#">Large DieCast Car Collection *...</a></li>
-                            <li><a href="#">NECKLACE DIAMOND "V" SHAPED YE...</a></li>
-                            <li><a href="#">1.07 Acre Arizona Investment P...</a></li>
+                            <li><a href="#" class="middle_a_two">Large DieCast Car Collection *...</a></li>
+                            <li><a href="#" class="middle_a_two">NECKLACE DIAMOND "V" SHAPED YE...</a></li>
+                            <li><a href="#" class="middle_a_two">1.07 Acre Arizona Investment P...</a></li>
                         </ul>
                     </div>
                     <div id="sections_right_chunk_four_right">
                         <ul class="list">
-                            <li><a href="#">Chris Campbell Home Business M...</a></li>
-                            <li><a href="#">CC RUSSIA ROYALTY NICHOLAS II</a></li>
-                            <li><a href="#">GERMAN Engineer Red Fountain....</a></li>
+                            <li><a href="#" class="middle_a_two">Chris Campbell Home Business M...</a></li>
+                            <li><a href="#" class="middle_a_two">CC RUSSIA ROYALTY NICHOLAS II</a></li>
+                            <li><a href="#" class="middle_a_two">GERMAN Engineer Red Fountain....</a></li>
                         </ul>
                     </div>
                 </div>
@@ -137,5 +139,6 @@
             </div>
         </div>
     </div>
+    <script src="js/eBayHome.js"></script>
 </body>
 </html>
