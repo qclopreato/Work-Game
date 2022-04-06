@@ -1,4 +1,4 @@
-function myFunction(){
+function balanceFunction(){
     saveMoney = JSON.parse(localStorage.getItem(`saveMoney`));
     saveEnergy = JSON.parse(localStorage.getItem(`saveEnergy`));
     document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
@@ -6,4 +6,3 @@ function myFunction(){
     document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
     document.getElementById(`energy_balance`).style.color = `red`;
 }
-    
