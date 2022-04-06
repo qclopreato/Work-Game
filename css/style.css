@@ -794,3 +794,34 @@ body {
   width: 45%;
 }
 /*End Ebay*/
+
+/*Buy Page*/
+#buy_middle{
+  display: grid;
+  height: 10px;
+  width: 900px;
+  margin: auto;
+  margin-top: 20px;
+  grid-template-columns: 200px 700px;
+  grid-template-rows: 200px 300px;
+}
+
+#first_buy_picture{
+  padding: 5px;
+  border: 1px solid lightgray;
+}
+
+#first_buy_description_container{
+  border: 1px solid lightgray;
+}
+
+#oldMouse{
+  width: 100%;
+  height: 100%;
+}
+
+#buyOldMouse{
+  margin-left: 25px;
+}
+
+/*End Buy Page*/
