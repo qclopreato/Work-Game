@@ -128,9 +128,17 @@ body {
   margin: 0px;
 }
 
+#time{
+  font-family: "Arial Black";
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(208, 255, 21);
+  margin: 0px;
+}
+
 #drink {
   position: absolute;
-  top: 43px;
+  top: 55px;
   left: 0;
   right: 0;
   margin: auto;
@@ -144,7 +152,7 @@ body {
 
 #store {
   position: absolute;
-  top: 35px;
+  top: 45px;
   left: 420px;
   right: 0px;
   margin: auto;
