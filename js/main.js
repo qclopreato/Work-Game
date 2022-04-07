@@ -1,25 +1,26 @@
-let iteration = 0;
 const saveStorage = document.getElementById(`saveStorage`);
 const clearStorage = document.getElementById(`clearStorage`);
 const storage = window.localStorage;
 
 let saveMoney = {};
 let saveEnergy = {};
+let saveTime = {};
 
 function load(){
-    if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`)){
+    if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`) && storage.getItem(`saveTime`)){
         saveMoney = JSON.parse(storage.getItem(`saveMoney`));
         saveEnergy = JSON.parse(storage.getItem(`saveEnergy`));
-        console.log(`Money save found`, saveMoney);
-        console.log(`Energy save found`, saveEnergy);
+        saveTime = JSON.parse(storage.getItem(`saveTime`));
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`;
     } else {
         saveMoney.count = 0;
         saveEnergy.count = 100;
-        console.log(`Saves not found`);
+        saveTime.count = 1;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`;
     }
 }
 load();
@@ -27,19 +28,19 @@ load();
 saveStorage.addEventListener(`click`, function(){
     storage.setItem(`saveMoney`, JSON.stringify(saveMoney));
     storage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
-    console.log(`Saved game`);
+    storage.setItem(`saveTime`, JSON.stringify(saveTime));
 })
 
 clearStorage.addEventListener(`click`, function(){
     localStorage.clear();
     document.getElementById(`money`).innerHTML = `$` + 0;
     document.getElementById(`energy`).innerHTML = 100;
+    document.getElementById(`time`).innerHTML = 1 + ` Seconds`;
     window.location.href = window.location.href;
 });
 
 document.getElementById(`ebay_button`).addEventListener(`click`, function(){
     location.href = `ebay.html`;
-    iteration 
 });
 
 document.getElementById(`code`).addEventListener(`click`, function(){
@@ -48,6 +49,11 @@ document.getElementById(`code`).addEventListener(`click`, function(){
         saveEnergy.count--;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
+        document.getElementById(`code`).disabled = true;
+        setTimeout(
+            function(){
+                document.getElementById(`code`).disabled = false;
+            }, (saveTime.count * 1000)); /*Changes how fast you can code*/
     } else if (saveEnergy.count === 0){
         document.getElementById(`code`).disabled = true;
         document.getElementById(`code`).style.pointerEvents = `none`;
