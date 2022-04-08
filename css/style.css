@@ -820,12 +820,14 @@ body {
 }
 
 .buy_description_container{
+  padding: 30px;
   margin-bottom: 10px;
 }
 
 #oldMouse{
+  margin-top: 20px;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 #newMouse{
@@ -858,10 +860,6 @@ body {
 #mystery{
   width: 100%;
   height: 100%;
-}
-
-#buyOldMouse{
-  margin-left: 25px;
 }
 
 /*End Buy Page*/
