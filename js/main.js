@@ -13,14 +13,14 @@ function load(){
         saveTime = JSON.parse(storage.getItem(`saveTime`));
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
-        document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`;
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Second`;
     } else {
         saveMoney.count = 0;
         saveEnergy.count = 100;
         saveTime.count = 1;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
-        document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`;
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Second`;
     }
 }
 load();
@@ -65,10 +65,19 @@ document.getElementById(`code`).addEventListener(`click`, function(){
 
 document.getElementById(`drink`).addEventListener(`click`, function(){
     if (saveMoney.count >= 10) {
+        document.getElementById(`drink`).style.pointerEvents = `none`;
+        saveTime.count = 0;
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`
         saveMoney.count -= 10;
         const energyCheck = saveEnergy.count < 71 ? saveEnergy.count += 30 : saveEnergy.count += 100 - saveEnergy.count;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
+        setTimeout(
+            function(){
+                document.getElementById(`drink`).style.pointerEvents = `auto`;
+                saveTime.count = 1;
+                document.getElementById(`time`).innerHTML = saveTime.count + ` Second`
+            }, 5000);
     } else if (saveMoney.count < 10){
         saveEnergy.count += 0;
     } 
