@@ -5,23 +5,26 @@ const storage = window.localStorage;
 let saveMoney = {};
 let saveEnergy = {};
 let saveTime = {};
+let drinkTime = {};
 let revertTime = 0;
 
 function load(){
-    if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`) && storage.getItem(`saveTime`)){
+    if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`) && storage.getItem(`saveTime`) && storage.getItem(`drinkTime`)){
         saveMoney = JSON.parse(storage.getItem(`saveMoney`));
         saveEnergy = JSON.parse(storage.getItem(`saveEnergy`));
         saveTime = JSON.parse(storage.getItem(`saveTime`));
+        drinkTime = JSON.parse(storage.getItem(`drinkTime`));
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
-        document.getElementById(`time`).innerHTML = saveTime.count + ` Second`;
+        document.getElementById(`time`).innerHTML = Math.round(saveTime.count *100)/100 + ` Second(s)`;
     } else {
         saveMoney.count = 0;
         saveEnergy.count = 100;
         saveTime.count = 1;
+        drinkTime.count = 5000;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
-        document.getElementById(`time`).innerHTML = saveTime.count + ` Second`;
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Second(s)`;
     }
 }
 load();
@@ -30,13 +33,14 @@ saveStorage.addEventListener(`click`, function(){
     storage.setItem(`saveMoney`, JSON.stringify(saveMoney));
     storage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
     storage.setItem(`saveTime`, JSON.stringify(saveTime));
+    storage.setItem(`drinkTime`, JSON.stringify(drinkTime));
 })
 
 clearStorage.addEventListener(`click`, function(){
     localStorage.clear();
     document.getElementById(`money`).innerHTML = `$` + 0;
     document.getElementById(`energy`).innerHTML = 100;
-    document.getElementById(`time`).innerHTML = 1 + ` Seconds`;
+    document.getElementById(`time`).innerHTML = 1 + ` Second(s)`;
     window.location.href = window.location.href;
 });
 
@@ -74,17 +78,17 @@ document.getElementById(`drink`).addEventListener(`click`, function(){
             revertTime = 1;
             saveTime.count = 0;
         }
-        document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`
+        document.getElementById(`time`).innerHTML = saveTime.count + ` Second(s)`
         saveMoney.count -= 10;
-        const energyCheck = saveEnergy.count < 71 ? saveEnergy.count += 30 : saveEnergy.count += 100 - saveEnergy.count;
+        const energyCheck = saveEnergy.count < 51 ? saveEnergy.count += 50 : saveEnergy.count += 100 - saveEnergy.count;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
         setTimeout(
             function(){
                 document.getElementById(`drink`).style.pointerEvents = `auto`;
-                saveTime.count = revertTime;
-                document.getElementById(`time`).innerHTML = saveTime.count + ` Second`
-            }, 5000);
+                saveTime.count = Math.round(revertTime *100)/100;
+                document.getElementById(`time`).innerHTML = saveTime.count + ` Second(s)`
+            }, drinkTime.count);
     } else if (saveMoney.count < 10){
         saveEnergy.count += 0;
     } 
