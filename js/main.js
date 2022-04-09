@@ -5,6 +5,7 @@ const storage = window.localStorage;
 let saveMoney = {};
 let saveEnergy = {};
 let saveTime = {};
+let revertTime = 0;
 
 function load(){
     if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`) && storage.getItem(`saveTime`)){
@@ -66,7 +67,13 @@ document.getElementById(`code`).addEventListener(`click`, function(){
 document.getElementById(`drink`).addEventListener(`click`, function(){
     if (saveMoney.count >= 10) {
         document.getElementById(`drink`).style.pointerEvents = `none`;
-        saveTime.count = 0;
+        if (saveTime.count < 1){
+            revertTime = saveTime.count;
+            saveTime.count = 0;
+        } else if (saveTime.count === 1){
+            revertTime = 1;
+            saveTime.count = 0;
+        }
         document.getElementById(`time`).innerHTML = saveTime.count + ` Seconds`
         saveMoney.count -= 10;
         const energyCheck = saveEnergy.count < 71 ? saveEnergy.count += 30 : saveEnergy.count += 100 - saveEnergy.count;
@@ -75,7 +82,7 @@ document.getElementById(`drink`).addEventListener(`click`, function(){
         setTimeout(
             function(){
                 document.getElementById(`drink`).style.pointerEvents = `auto`;
-                saveTime.count = 1;
+                saveTime.count = revertTime;
                 document.getElementById(`time`).innerHTML = saveTime.count + ` Second`
             }, 5000);
     } else if (saveMoney.count < 10){
