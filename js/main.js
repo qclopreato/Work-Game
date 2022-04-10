@@ -7,6 +7,7 @@ let saveEnergy = {};
 let saveTime = {};
 let drinkTime = {};
 let revertTime = 0;
+let codeMinus = 2;
 
 function load(){
     if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`) && storage.getItem(`saveTime`) && storage.getItem(`drinkTime`)){
@@ -51,7 +52,7 @@ document.getElementById(`ebay_button`).addEventListener(`click`, function(){
 document.getElementById(`code`).addEventListener(`click`, function(){
     if (saveEnergy.count > 0){
         saveMoney.count++;
-        saveEnergy.count--;
+        saveEnergy.count -= codeMinus;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
         document.getElementById(`code`).disabled = true;
@@ -81,10 +82,12 @@ document.getElementById(`drink`).addEventListener(`click`, function(){
         document.getElementById(`time`).innerHTML = saveTime.count + ` Second(s)`
         saveMoney.count -= 10;
         const energyCheck = saveEnergy.count < 51 ? saveEnergy.count += 50 : saveEnergy.count += 100 - saveEnergy.count;
+        codeMinus = 0;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
         setTimeout(
             function(){
+                codeMinus = 2;
                 document.getElementById(`drink`).style.pointerEvents = `auto`;
                 saveTime.count = Math.round(revertTime *100)/100;
                 document.getElementById(`time`).innerHTML = saveTime.count + ` Second(s)`
