@@ -118,3 +118,68 @@ document.getElementById(`buyFuel`).addEventListener(`click`, function(){
         }
     }
 });
+
+document.getElementById(`rollMystery`).addEventListener(`click`, function(){
+    let rollValue = Math.round(Math.random() * 10);
+    document.getElementById(`rollResult`).innerHTML = rollValue;
+    if (rollValue === 0){
+        console.log(`zero`);
+        if (saveEnergy.count < 51){
+            saveEnergy.count += 50;
+            saveMoney.count += 50;
+            document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+            document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+            localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+            localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+        }
+        else if (saveEnergy.count >= 51 && saveEnergy.count < 100){
+            saveMoney.count += (50 + (100 - saveEnergy.count));
+            saveEnergy.count += 100 - saveEnergy.count;
+            document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+            document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+            localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+            localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+        }
+        else if (saveEnergy.count === 100){
+            saveEnergy.count += 0;
+            saveMoney.count += 100;
+            document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+            document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+            localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+            localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+        }   
+    }
+    else if (rollValue >= 1 && rollValue <= 5){
+        console.log(`1-5`);
+        if (saveEnergy.count < 91){
+            saveEnergy.count += 10;
+            saveMoney.count += 10;
+            document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+            document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+            localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+            localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+        }
+        else if (saveEnergy.count >= 91 && saveEnergy.count < 100){
+            saveMoney.count += (10 + (100 - saveEnergy.count));
+            saveEnergy.count += 100 - saveEnergy.count;
+            document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+            document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+            localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+            localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+        }
+        else if (saveEnergy.count === 100){
+            saveEnergy.count += 0;
+            saveMoney.count += 20;
+            document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+            document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+            localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+            localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+        }
+    }
+    else if (rollValue >= 6 && rollValue <= 10){
+        console.log(`6-10`);
+        saveMoney.count -= 20;
+        document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+        localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+    }
+});
