@@ -45,7 +45,7 @@ document.getElementById(`buyOldMouse`).addEventListener(`click`, function(){
         if (saveMoney.count >= 25){
             saveMoney.count -= 25;
             document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
-            saveTime.count -= 0.1;
+            saveTime.count -= 0.2;
             document.getElementById(`time_balance`).innerHTML = saveTime.count + ` seconds`;
             localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
             localStorage.setItem(`saveTime`, JSON.stringify(saveTime));
@@ -66,7 +66,7 @@ document.getElementById(`buyNewMouse`).addEventListener(`click`, function(){
         if (saveMoney.count >= 200){
             saveMoney.count -= 200;
             document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
-            saveTime.count -= 0.2;
+            saveTime.count -= 0.3;
             document.getElementById(`time_balance`).innerHTML = Math.round(saveTime.count * 100)/100 + ` seconds`;
             localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
             localStorage.setItem(`saveTime`, JSON.stringify(saveTime));
@@ -86,7 +86,7 @@ document.getElementById(`buyTower`).addEventListener(`click`, function(){
         if (saveMoney.count >= 400){
             saveMoney.count -= 400;
             document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
-            saveTime.count -= 0.3;
+            saveTime.count -= 0.5;
             document.getElementById(`time_balance`).innerHTML = Math.round(saveTime.count * 100)/100 + ` seconds`;
             localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
             localStorage.setItem(`saveTime`, JSON.stringify(saveTime));
@@ -103,8 +103,8 @@ document.getElementById(`buyTower`).addEventListener(`click`, function(){
 document.getElementById(`buyFuel`).addEventListener(`click`, function(){
     if (localStorage.getItem(`fuel_disable`)){
     } else {
-        if (saveMoney.count >= 500){
-            saveMoney.count -= 500;
+        if (saveMoney.count >= 200){
+            saveMoney.count -= 200;
             drinkTime.count = 10000;
             document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
             localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
@@ -116,6 +116,19 @@ document.getElementById(`buyFuel`).addEventListener(`click`, function(){
         } else {
             alert(`You can't afford this!`);
         }
+    }
+});
+
+document.getElementById(`buyMovie`).addEventListener(`click`, function(){
+    if (saveMoney.count >= 20){
+        saveMoney.count -= 20;
+        saveEnergy.count += (100 - saveEnergy.count);
+        document.getElementById(`money_balance`).innerHTML = `$` + saveMoney.count;
+        document.getElementById(`energy_balance`).innerHTML = saveEnergy.count + ` Energy`;
+        localStorage.setItem(`saveMoney`, JSON.stringify(saveMoney));
+        localStorage.setItem(`saveEnergy`, JSON.stringify(saveEnergy));
+    } else {
+        alert(`You can't afford this!`);
     }
 });
 
