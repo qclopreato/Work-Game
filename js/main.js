@@ -81,8 +81,8 @@ document.getElementById(`drink`).addEventListener(`click`, function(){
         }
         document.getElementById(`time`).innerHTML = saveTime.count + ` Second(s)`
         saveMoney.count -= 10;
-        const energyCheck = saveEnergy.count < 51 ? saveEnergy.count += 50 : saveEnergy.count += 100 - saveEnergy.count;
-        codeMinus = 0;
+        const energyCheck = saveEnergy.count < 91 ? saveEnergy.count += 10 : saveEnergy.count += 100 - saveEnergy.count;
+        codeMinus = 1;
         document.getElementById(`money`).innerHTML = `$` + saveMoney.count;
         document.getElementById(`energy`).innerHTML = saveEnergy.count;
         setTimeout(
