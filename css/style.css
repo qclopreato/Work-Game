@@ -53,7 +53,7 @@ body {
   background-color: black;
 }
 
-#about {
+#byQuinn {
   background-color: #1dc21a;
   width: 500px;
   margin-top: 0;
@@ -63,9 +63,14 @@ body {
   text-align: center;
 }
 
-#aboutPage {
+#byQuinnPage {
   margin: 3px;
   font-family: "Lucida Console";
+}
+
+#byQuinnLink{
+  text-decoration: none;
+  color: black;
 }
 
 #bar {
@@ -804,12 +809,12 @@ body {
 /*Buy Page*/
 #buy_middle{
   display: grid;
-  height: 10px;
+  height: fit-content;
   width: 900px;
   margin: auto;
   margin-top: 20px;
   grid-template-columns: 200px 700px;
-  grid-template-rows: 200px 200px 200px 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px 200px 200px;
 }
 
 .buy_picture{
@@ -823,6 +828,16 @@ body {
   padding-left: 20px;
   padding-bottom: 0;
   margin-bottom: 10px;
+}
+
+#returnTop{
+  margin: auto;
+  padding: 10px;
+}
+
+#returnTopText{
+  text-decoration: none;
+  color: blue;
 }
 
 #oldMouse{
