@@ -163,16 +163,10 @@ body {
 
 #saveStorage:hover{
   cursor: pointer;
-  background-color: blue;
-  border: 1px solid blue;
-  border-radius: 0;
 }
 
 #clearStorage:hover{
   cursor: pointer;
-  background-color: red;
-  border: 1px solid red;
-  border-radius: 0;
 }
 
 #ebay_button {
@@ -205,6 +199,10 @@ body {
   width: 105px;
 }
 
+#ebay:hover{
+  cursor: pointer;
+}
+
 #top_section{
   width: 900px;
   margin: auto;
@@ -233,7 +231,7 @@ body {
   border-right: 1px solid lightgray;
   font-weight: 700;
   font-family: arial, helvetica, sans-serif;
-  color: black;
+  color: blue;
   font-size: small;
 }
 
@@ -277,7 +275,7 @@ body {
   text-decoration: underline;
 }
 
-#community{
+#returnGame{
   text-decoration: none;
   display: inline-block;
   padding-top: 5px;
@@ -287,11 +285,11 @@ body {
   border-right: 1px solid lightgray;
   font-weight: 700;
   font-family: arial, helvetica, sans-serif;
-  color: black;
+  color: blue;
   font-size: small;
 }
 
-#community:hover{
+#returnGame:hover{
   text-decoration: underline;
 }
 
