@@ -39,6 +39,10 @@ function balanceFunction(){
     }
 }
 
+document.getElementById(`ebay`).addEventListener(`click`, function(){
+    location.href = `ebay.html`;
+});
+
 document.getElementById(`buyOldMouse`).addEventListener(`click`, function(){
     if (localStorage.getItem(`old_mouse_disable`)){
     } else {
