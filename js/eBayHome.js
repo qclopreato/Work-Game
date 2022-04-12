@@ -19,3 +19,7 @@ function balanceFunction(){
         document.getElementById(`time_balance`).style.color = `#cccc00`;
     }
 }
+
+document.getElementById(`ebay`).addEventListener(`click`, function(){
+    location.href = `ebay.html`;
+});
