@@ -46,7 +46,11 @@ clearStorage.addEventListener(`click`, function(){
 });
 
 document.getElementById(`ebay_button`).addEventListener(`click`, function(){
+if (storage.getItem(`saveMoney`) && storage.getItem(`saveEnergy`) && storage.getItem(`saveTime`) && storage.getItem(`drinkTime`)){
     location.href = `ebay.html`;
+} else {
+    alert(`You must save your game before going to the shop.`);
+}
 });
 
 document.getElementById(`code`).addEventListener(`click`, function(){
